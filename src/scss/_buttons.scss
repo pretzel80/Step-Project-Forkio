@@ -1,0 +1,16 @@
+.btn {
+  box-sizing: border-box;
+  background-color: $violet-middle;
+  border-radius: 50px;
+  @include Montserrat-bold;
+  color: $white;
+  border: 2px solid $violet-middle;
+  transition: color .2s linear, background-color .2s linear, border-color .2s linear;
+
+
+  &:hover {
+    background-color: $white;
+    border: 2px solid $violet-middle;
+    color: $text-color--secondary;
+  }
+}

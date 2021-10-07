@@ -1,0 +1,69 @@
+.header {
+  @include flex-center;
+  align-items: flex-start;
+  padding-top: 180px;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+
+  background: no-repeat center/cover url("../images/header/header_background.png");
+
+  @media (max-width: $screen-lg) {
+    padding-top: 170px;
+    height: 115vh;
+    }
+
+
+  @media (max-width: $screen-sm) {
+    padding-top: 145px;
+    height: 90vh;
+  }
+ }
+
+.header__inner {
+  @include flex-center;
+  flex-direction: column;
+  text-align: center;
+
+  .header__title {
+    @include Montserrat-bold;
+    font-size: 82px;
+    color: $white;
+
+    @media (max-width: $screen-lg) {
+      font-size: 67px;
+    }
+
+    @media (max-width: $screen-sm) {
+      font-size: 48px;
+    }
+  }
+
+  .header__subtitle {
+    padding: 20px 0;
+    @include Lato-normal;
+    font-size: 30px;
+    color: $text-color--secondary;
+
+    @media (max-width: $screen-lg) {
+      font-size: 24px;
+    }
+
+    @media (max-width: $screen-sm) {
+      font-size: 18px;
+    }
+  }
+
+  .header__version {
+    @include Montserrat-normal;
+    font-size: $font-size;
+    text-transform: uppercase;
+    color: $text-color--tertiary;
+
+    @media (max-width: $screen-lg) {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "main-step-project-forkio",
+  "version": "1.0.0",
+  "description": "step-project-forkio",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/home96.09/step-project-forkio/-/blob/master/README.md"
+  },
+  "keywords": [
+    "step-project"
+  ],
+  "author": "Kalychak Roman and Dmitriy Zyakun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/home96.09/step-project-forkio.git"
+  },
+  "homepage": "https://gitlab.com/home96.09/step-project-forkio/-/blob/master/README.md",
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-purgecss": "^4.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "gulp-cache": "^1.1.3"
+  }
+}

@@ -1,0 +1,173 @@
+.pricing{
+  margin: 0 auto;
+  max-width: 1200px;
+  background: no-repeat center/cover url("../images/background_price.jpg");
+
+  &__wrapper{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 10px 97px;
+  }
+  &__title{
+    color: $white;
+    @include Montserrat-bold;
+    font-size: 48px;
+    line-height: 50px;
+    margin: 0 0 55px;
+  }
+  &__cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 -7.5px;
+    align-items: center;
+  }
+}
+
+.card{
+  width: 23%;
+  height: 460px;
+  margin: 7.5px;
+  padding-bottom: 37px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.11);
+
+  &__title{
+    color: $white;
+    @include Montserrat-normal;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 24px;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 35px 0;
+
+  }
+  &__value{
+    flex-basis: 26%;
+    color: $white;
+    @include Montserrat-normal;
+    font-size: 60px;
+    line-height: 90px;
+
+  }
+  &__period{
+    flex-basis: 6%;
+    color: $white;
+    @include Montserrat-normal;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  hr{
+
+    width: 60px;
+    border: 3px solid $violet-middle;
+
+  }
+  &__conditions{
+    flex-basis: 17%;
+    color: $white;
+    @include Montserrat-normal;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 0 10px;
+
+  }
+  &__button{
+    margin: 0 auto;
+
+    color: $white;
+    @include Montserrat-normal;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 15px;
+    border-radius: 20px;
+    padding: 15px 25px;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+  }
+}
+
+.card--active.card {
+  width: 27%;
+  height: 560px;
+  padding-bottom: 47px;
+  background: rgba(70, 48, 72, 0.84);
+}
+
+.card--active .card__title{
+  background: rgba(255, 255, 255, 0.11);
+  padding: 43px 0;
+}
+
+.card--active .card__value{
+  font-size: 82px;
+  line-height: 90px;
+}
+
+.card--active .card__button{
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 18.5px 35px;
+
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 992px) {
+
+  .pricing__wrapper {
+    padding-top: 88px;
+  }
+
+  .pricing__cards{
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 40%;
+
+    &__title{
+      font-size: 21px;
+      line-height: 23px;
+    }
+  }
+  .card--active.card {
+    width: 47%;
+    margin-left: -5%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+  .pricing__wrapper {
+    padding-top: 15px;
+  }
+
+  .pricing {
+    &__container {
+      padding: 15px 10px;
+    }
+
+    &__title {
+      font-size: 28px;
+      line-height: 42px;
+      margin: 0 0 15px;
+    }
+
+    &__cards {
+      flex-wrap: wrap;
+    }
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  .card.card--active {
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,107 @@
+.people-talking {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+
+  background: no-repeat center/cover url("../images/people-talking/people-talking-bg.png");
+
+  &__wrapper {
+    @include flex-center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 100px;
+
+    @media (max-width: $screen-sm) {
+      padding-top: 50px;
+    }
+
+    .people-talking__title {
+      text-align: center;
+      @include Montserrat-bold;
+      font-size: $font-size--h2;
+      line-height: 50px;
+      color: $white;
+
+      @media (max-width: $screen-lg) {
+        font-size: 42px;
+        line-height: 44px;
+      }
+
+      @media (max-width: $screen-sm) {
+        font-size: 36px;
+        line-height: 48px;
+      }
+    }
+
+    .people-talking__items {
+
+      @include flex-center;
+      align-items: flex-start;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      .people-talking__item {
+        margin-top: 80px;
+        padding-top: 80px;
+        position: relative;
+        @include flex-center;
+        flex-direction: column;
+        width: 30%;
+
+        @media (max-width: $screen-lg) {
+          width: 45%;
+          padding-top: 50px;
+        }
+        @media (max-width: $screen-sm) {
+          width: 100%;
+          padding-top: 50px;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        p {
+          text-align: center;
+          @include Lato-bold;
+          font-size: $font-size;
+          line-height: 24px;
+          font-style: italic;
+          color: $white;
+
+          @media (max-width: $screen-lg) {
+            padding-top: 30px;
+          }
+        }
+      }
+    }
+
+    .people-talking__footer {
+      margin-top: 60px;
+      max-width: 70%;
+      text-align: center;
+      @include Lato-normal;
+      font-size: $font-size--small;
+      line-height: 21px;
+      color: $text-color--quaternary;
+
+      @media (max-width: $screen-lg) {
+        max-width: 90%;
+      }
+    }
+
+    .people-talking__line {
+      margin-top: 20px;
+      width: 60%;
+      height: 2px;
+      background-color: #645766;
+
+      @media (max-width: $screen-lg) {
+        width: 80%;
+      }
+    }
+  }
+}

@@ -1,0 +1,391 @@
+.editor {
+  &-wrapper {
+    position: relative;
+    background-color: $white;
+    @include flex-center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .btn-editor {
+    position: absolute;
+    top: -29px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 390px;
+    padding: 20px 0;
+    font-size: $font-size--navbar;
+
+
+    @media (max-width: $screen-sm) {
+      padding: 13px 0;
+      width: 290px;
+      top: -25px;
+      right: 50%;
+      transform: translateX(-50%);
+      font-size: 18px;
+    }
+  }
+
+  &__text--up {
+    margin-top: 38px;
+    padding: 19px 0 66px;
+
+    h3 {
+      color: $text-color--tertiary;
+      @include Montserrat-normal;
+      font-size: $font-size--small;
+      line-height: 15px;
+    }
+  }
+
+  &__title {
+
+    h1 {
+      color: $text-color--violet-dark;
+      @include Montserrat-bold;
+      font-size: 54px;
+      line-height: 54px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__text--down {
+    width: 80%;
+    margin-top: 35px;
+
+    h3 {
+      color: $text-color--dark;
+      @include Lato-normal;
+      font-size: 21px;
+      line-height: 32px;
+    }
+  }
+
+  &__counter {
+    display: flex;
+    flex-direction: row;
+    padding: 0 -8px;
+  }
+}
+
+
+.counter {
+  @include flex-center;
+  flex-direction: row;
+  border-radius: 3px;
+  border: 1px solid $grey-little;
+  margin: 25px 4px 70px;
+  @include Montserrat-bold;
+  font-size: 12px;
+  line-height: 20px;
+
+  &__logo {
+    @include flex-center;
+    flex-direction: row;
+    background-color: $grey-light;
+    border-right: 1px solid $grey-little;
+    padding-right: 8px;
+
+    img {
+      height: 16px;
+      padding-left: 8px;
+    }
+
+    p {
+      padding-left: 5px;
+    }
+  }
+
+  &__rank {
+    padding-left: 5px;
+    padding-right: 8px;
+  }
+}
+
+
+.code {
+  &__container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 7vh 0 10px;
+    background-color: #F4F4F4;
+  }
+
+  &__title {
+    h2 {
+      color: $text-color--secondary;
+      @include Montserrat-bold;
+      font-size: calc(38px + (48 - 38) * ((100vw - 993px) / (1900 - 993)));
+      line-height: 48px;
+    }
+  }
+}
+
+.article {
+  &__text {
+    &--top {
+      color: $text-color--dark;
+      @include Montserrat-normal;
+      font-size: calc(14px + (16 - 14) * ((100vw - 993px) / (1900 - 993)));
+      line-height: 21px;
+      margin-bottom: 10px;
+    }
+
+    &--bottom {
+      color: $text-color--tertiary;
+      @include Montserrat-normal;
+      font-size: calc(12px + (14 - 12) * ((100vw - 993px) / (1900 - 993)));
+      line-height: 21px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__img {
+    align-self: flex-start;
+    text-align: center;
+    padding-top: 7px;
+  }
+}
+
+.code__title {
+  grid-area: title;
+  text-align: center;
+  padding-right: 3%;
+}
+
+.article-img-1 {
+  grid-area: img1;
+}
+
+.article-text-1 {
+  grid-area: text1;
+}
+
+.article-img-2 {
+  grid-area: img2;
+}
+
+.article-img-3 {
+  grid-area: img3;
+}
+
+.article-img-4 {
+  grid-area: img4;
+}
+
+.article-text-2 {
+  grid-area: text2;
+}
+
+.article-text-3 {
+  grid-area: text3;
+}
+
+.article-text-4 {
+  grid-area: text4;
+}
+
+.code__example {
+  grid-area: example;
+}
+
+.code {
+  &__container {
+    padding-left: 3%;
+
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 1fr 4fr 5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "img1 text1 title"
+        "img1 text1 example"
+        "img2 text2 example"
+        "img2 text2 example"
+        "img3 text3 example"
+        "img3 text3 example"
+        "img4 text4 example"
+        "img4 text4 example";
+  }
+
+  &__example {
+    text-align: end;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 992px) {
+
+  .editor {
+    &__title {
+
+      h1 {
+        font-size: 42px;
+        line-height: 42px;
+      }
+    }
+
+    &__text--down {
+      width: 100%;
+      h3 {
+        font-size: 21px;
+      }
+    }
+  }
+
+  .code__title {
+    padding-right: 0;
+  }
+
+  .code {
+    &__container {
+      background-color: $white;
+      display: grid;
+      grid-gap: 0;
+      grid-template-columns: 30% 60%;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "title title"
+        "img1 text1"
+        "img2 text2"
+        "img3 text3"
+        "img4 text4"
+        "example example";
+    }
+
+    &__title {
+      h2 {
+        font-size: 42px;
+        line-height: 44px;
+      }
+    }
+
+    &__example {
+      text-align: end;
+
+      img {
+        width: 100%;
+        margin-right: -94px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+  .editor {
+    &__title {
+
+      h1 {
+        font-size: 26px;
+        line-height: 28px;
+      }
+    }
+
+    &__text--down {
+
+      width: 100%;
+      h3 {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .editor__counter {
+    @include flex-center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .editor__counter .counter:nth-child(3){
+    margin-top: 20px;
+  }
+
+  .counter {
+    flex-basis: 30%;
+    margin: 5px;
+  }
+
+
+
+  .code__title {
+    padding-right: 0;
+  }
+
+  .code {
+    &__container {
+      padding-top: 120px;
+      background-color: $white;
+      display: grid;
+      grid-gap: 0;
+      grid-template-columns: 95%;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "title"
+        "img1"
+        "text1"
+        "img2"
+        "text2"
+        "img3"
+        "text3"
+        "img4"
+        "text4"
+        "example";
+    }
+
+    &__title {
+      h2 {
+        font-size: 32px;
+        line-height: 38px;
+      }
+    }
+
+    &__example {
+      width: 130%;
+      text-align: end;
+
+      img {
+        width: 130%;
+        //margin-right: -94px;
+      }
+    }
+  }
+
+  .article {
+    &__text {
+
+      &--top {
+        font-size: $font-size;
+        line-height: $font-size;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      &--bottom {
+        font-size: $font-size--small;
+        line-height: 21px;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+    }
+
+    &__img {
+      align-self: flex-start;
+      text-align: center;
+      padding-top: 6px;
+    }
+  }
+
+  .editor__counter .counter:nth-child(3){
+    margin-top: 16px;
+  }
+}

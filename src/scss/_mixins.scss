@@ -1,0 +1,52 @@
+@mixin container-position-center{
+  margin: 0 auto;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin Montserrat-normal{
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin Montserrat-bold{
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin Montserrat-extra-bold{
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+}
+
+@mixin Montserrat-black{
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+}
+
+
+@mixin Lato-normal{
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin Lato-bold{
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin Lato-black{
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+}
